@@ -16,7 +16,7 @@ import bcrypt
 app = Flask(__name__)
 global model
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-model = load_model(os.path.join(BASE_DIR, 'finnalproject.h5'_Apps.h5))
+model = load_model(os.path.join(BASE_DIR, 'finnalprject_Apps.h5))
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'

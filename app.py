@@ -40,7 +40,7 @@ def predict():
     imageFile = request.files['imagefile']
 
     if imageFile.filename == '':
-        return render_template('index.html', prediction='No selected file')
+        return render_template('app.html', prediction='No selected file')
 
     if imageFile and allowed_file(imageFile.filename):  # Assuming you have an 'allowed_file' function for validation
         image_path = os.path.join(app.config['UPLOAD_FOLDER'], imageFile.filename)  # Assuming you have an 'UPLOAD_FOLDER' config variable

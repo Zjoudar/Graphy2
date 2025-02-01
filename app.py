@@ -48,13 +48,12 @@ def predict():
         imageFile.save(image_path)
 
         try:
-            image = load_img(image_path, target_size=(224, 224))
-            image = img_to_array(image)
-            image = image.reshape((1, image.shape[0], image.shape[1], image.shape[2]))  # Handle potential grayscale images
+            img = cv2.resize(image, (128, 128)) 
+            img = img_to_array(img)
+            img = np.expand_dims(image, axis=0) 
+            img = img / 255.0  
             image = preprocess_input(image)
             yhat = model.predict(image)
-
-            # Handle model output format (assuming single class label)
             predicted_class_index = np.argmax(yhat)
             predicted_class = "Predicted Class: " + str(predicted_class_index)  # Replace with your class labels if needed
 

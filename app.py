@@ -9,13 +9,14 @@ from keras.applications.resnet50 import ResNet50
 import os 
 from tensorflow.keras.models import load_model
 import numpy as np
-
-
 from flask import Flask, render_template, request
 import os
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 from tensorflow.keras.applications.resnet50 import preprocess_input  # Assuming ResNet50
+import os
+
+os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
 app = Flask(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

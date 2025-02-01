@@ -4,6 +4,7 @@ absl-py==2.1.0
 astunparse==1.6.3
 blinker==1.9.0
 certifi==2025.1.31
+pillow
 charset-normalizer==3.4.1
 click==8.1.8
 colorama==0.4.6
